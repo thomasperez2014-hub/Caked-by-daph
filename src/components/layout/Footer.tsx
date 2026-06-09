@@ -90,20 +90,24 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-cream/10 pt-8 text-center text-xs text-cream/30">
-  <p>
-    © {new Date().getFullYear()} Caked by Daphh. All rights reserved. Made with love.
-  </p>
+                <div className="border-t border-cream/10 pt-8 text-center text-xs text-cream/30">
+          <p>
+            © {new Date().getFullYear()} Caked by Daphh. All rights reserved. Made with love.
+          </p>
 
-  <p className="mt-2">
-    Website designed by{" "}
-    <a
-      href="https://pcapexconsulting.com"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-accent hover:opacity-80 transition-opacity"
-    >
-      P&C Apex Consulting
-    </a>
-  </p>
-</div>
+          <p className="mt-2">
+            Website designed by{" "}
+            <a
+              href="https://pcapexconsulting.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-accent hover:opacity-80 transition-opacity"
+            >
+              P&amp;C Apex Consulting
+            </a>
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+}
