@@ -68,13 +68,15 @@ export default function ReviewsPage() {
   const [submitted, setSubmitted] = useState(false);
 
   const validate = () => {
-    const newErrors: typeof errors = {};
-    if (!form.name.trim()) newErrors.name = "Name is required.";
-    if (!form.event.trim()) newErrors.event = "Event type is required.";
-    if (!form.rating) newErrors.rating = "Please select a rating.";
-    if (!form.message.trim()) newErrors.message = "Review message is required.";
-    return newErrors;
-  };
+  const newErrors: Record<string, string> = {};
+
+  if (!form.name.trim()) newErrors.name = "Name is required.";
+  if (!form.event.trim()) newErrors.event = "Event type is required.";
+  if (!form.rating) newErrors.rating = "Please select a rating.";
+  if (!form.message.trim()) newErrors.message = "Review message is required.";
+
+  return newErrors;
+};
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
