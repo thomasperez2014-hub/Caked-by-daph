@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --cream: #F8F4EE;
+  --beige: #F2ECE4;
+  --taupe: #6E5E4E;
+  --accent: #B89D84;
+  --dark-taupe: #4F4338;
+  --border: #E6DDD3;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--cream);
+  color: var(--taupe);
+  font-family: Georgia, Cambria, "Times New Roman", serif;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-accent text-white px-7 py-3 rounded-full text-sm font-medium tracking-wide hover:bg-dark-taupe transition-colors duration-200 inline-block;
+  }
+
+  .btn-outline {
+    @apply border border-accent text-accent px-7 py-3 rounded-full text-sm font-medium tracking-wide hover:bg-accent hover:text-white transition-colors duration-200 inline-block;
+  }
+
+  .section-label {
+    @apply text-xs tracking-[0.25em] uppercase text-accent font-sans font-medium;
+  }
+
+  .section-heading {
+    @apply text-3xl md:text-4xl font-serif text-dark-taupe leading-snug;
+  }
+
+  .card {
+    @apply bg-beige border border-border rounded-2xl overflow-hidden;
+  }
+
+  .input-field {
+    @apply w-full bg-cream border border-border rounded-xl px-4 py-3 text-sm text-dark-taupe placeholder-taupe/50 focus:outline-none focus:border-accent transition-colors duration-200;
+  }
+
+  .cake-placeholder {
+    @apply bg-beige border border-border rounded-2xl flex items-center justify-center aspect-square;
+  }
+}
